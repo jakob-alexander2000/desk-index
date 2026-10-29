@@ -13,7 +13,7 @@ No database, no frameworks — stdlib HTTP + an in-memory index.
 ```bash
 git clone https://github.com/jakob-alexander2000/desk-index.git
 cd desk-index
-go test ./...
+go test -count=1 ./...
 go run ./cmd/desk-index -dir ./sample-notes -addr 127.0.0.1:8080
 ```
 
@@ -94,7 +94,7 @@ sample-notes/       sample notes for the demo
 ## Tests
 
 ```bash
-go test ./...
+go test -count=1 ./...
 ```
 
 ## License
