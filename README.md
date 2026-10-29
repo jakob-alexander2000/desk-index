@@ -1,9 +1,9 @@
 # desk-index
 
-It finds passages without calling a model. It is a separate project and does not power Desk or CiteBot.
+**A small Go search service for a folder of Markdown notes.** Point it at a folder and get ranked matches with a short excerpt from each. It finds passages without calling a model. It is a separate project and does not power Desk or CiteBot.
 
 ```
-folder of .md  →  inverted index  →  GET /search?q=…
+folder of .md  →  word index  →  GET /search?q=…
 ```
 
 No database and no frameworks: only Go's standard library and an in-memory index.
