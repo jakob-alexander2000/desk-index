@@ -1,4 +1,5 @@
 # Remote work
 
-Core hours are 10:00–16:00 Berlin time.
-Async updates go in the shared notes folder.
+People may work away from the office on ordinary weekdays.
+
+Async updates go in the shared notes folder. Be reachable in the team channel during the overlap window.

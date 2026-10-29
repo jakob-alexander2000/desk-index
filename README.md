@@ -22,18 +22,18 @@ go run ./cmd/desk-index -dir ./sample-notes -addr 127.0.0.1:8080
 One-shot CLI search (no server):
 
 ```bash
-go run ./cmd/desk-index search -dir ./sample-notes "applied AI agent"
+go run ./cmd/desk-index search -dir ./sample-notes "What are core hours?"
 ```
 
 Expected shape:
 
 ```json
 {
-  "query": "applied AI agent",
+  "query": "What are core hours?",
   "hits": [
     {
-      "path": "roadmap.md",
-      "title": "Product priorities",
+      "path": "core-hours.md",
+      "title": "Core hours",
       "score": …,
       "snippet": "…"
     }
@@ -49,7 +49,10 @@ go run ./cmd/desk-index -dir ./sample-notes
 
 # terminal B
 curl -s 'http://127.0.0.1:8080/health' | jq .
-curl -s 'http://127.0.0.1:8080/search?q=Berlin+on-call' | jq .
+curl -s --get --data-urlencode 'q=What are core hours?' 'http://127.0.0.1:8080/search' | jq .
+curl -s 'http://127.0.0.1:8080/search?q=paid+time+off' | jq .
+curl -s 'http://127.0.0.1:8080/search?q=team+offsite' | jq .
+curl -s 'http://127.0.0.1:8080/search?q=expense+policy' | jq .
 curl -s -X POST 'http://127.0.0.1:8080/reindex' | jq .
 ```
 
