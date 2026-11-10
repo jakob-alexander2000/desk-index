@@ -94,8 +94,8 @@ func (idx *Index) Build() error {
 		content := string(raw)
 		docs = append(docs, Doc{
 			Path:     rel,
-			Title:   titleFrom(rel, content),
-			Content: content,
+			Title:    titleFrom(rel, content),
+			Content:  content,
 			TermFreq: termFreq(content),
 		})
 		return nil
